@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emma Abzueta — Professional Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#F5F0EB;color:#1A1A1A;overflow-x:hidden}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 20px;position:relative;overflow:hidden}
+.float-icon{position:absolute;font-size:24px;opacity:0.18;pointer-events:none;z-index:0}
+.fi1{top:12%;left:8%;animation:drift1 8s ease-in-out infinite}
+.fi2{top:22%;right:12%;animation:drift2 9s ease-in-out infinite;font-size:28px}
+.fi3{top:55%;left:5%;animation:drift3 7s ease-in-out infinite;font-size:20px}
+.fi4{top:65%;right:8%;animation:drift1 10s ease-in-out infinite 1s;font-size:22px}
+.fi5{top:35%;left:18%;animation:drift2 8s ease-in-out infinite 2s;font-size:18px}
+.fi6{top:78%;right:18%;animation:drift3 9s ease-in-out infinite .5s;font-size:26px}
+.fi7{top:8%;right:30%;animation:drift1 7s ease-in-out infinite 1.5s;font-size:20px}
+.fi8{top:45%;right:25%;animation:drift2 11s ease-in-out infinite 3s;font-size:22px}
+.fi9{top:82%;left:22%;animation:drift3 8s ease-in-out infinite 2s;font-size:18px}
+.fi10{top:15%;left:35%;animation:drift1 9s ease-in-out infinite .8s;font-size:16px}
+@keyframes drift1{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-18px) rotate(8deg)}}
+@keyframes drift2{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(14px) rotate(-6deg)}}
+@keyframes drift3{0%,100%{transform:translateY(0) translateX(0)}50%{transform:translateY(-12px) translateX(8px)}}
+.hero-content{max-width:650px}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;padding:10px 22px;border-radius:50px;background:#15803D10;border:1px solid #15803D25;font-size:13px;font-weight:600;color:#15803D;letter-spacing:1px;text-transform:uppercase;margin-bottom:32px;animation:fadeUp .6s ease both}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:#22C55E;animation:pulse 2s infinite;box-shadow:0 0 8px #22C55E60}
+.hero-name{font-family:'Playfair Display',serif;font-size:clamp(40px,7vw,68px);font-weight:600;letter-spacing:-1px;line-height:1.08;margin-bottom:20px;color:#1A1A1A;animation:fadeUp .6s ease .1s both}
+.hero-title{font-size:16px;color:#8A8578;font-weight:400;line-height:1.8;margin-bottom:30px;animation:fadeUp .6s ease .2s both;max-width:520px;margin-left:auto;margin-right:auto}
+.hero-langs{display:flex;justify-content:center;gap:10px;margin-bottom:32px;animation:fadeUp .6s ease .3s both}
+.hero-lang{padding:10px 22px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:all .3s;letter-spacing:.5px;user-select:none;background:#E8E2DA;border:1px solid #D5CFC6;color:#6B6560}
+.hero-lang.active{background:#1A1A1A!important;border-color:#1A1A1A!important;color:#F5F0EB!important}
+.hero-ctas{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;animation:fadeUp .6s ease .4s both}
+.btn-primary{padding:14px 32px;border-radius:8px;background:#1A1A1A;color:#F5F0EB;font-weight:600;font-size:13px;letter-spacing:.5px;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{background:#333;transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.15)}
+.btn-secondary{padding:14px 32px;border-radius:8px;background:transparent;border:1px solid #D5CFC6;color:#1A1A1A;font-weight:600;font-size:13px;letter-spacing:.5px;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.btn-secondary:hover{border-color:#1A1A1A}
+
+/* TRUST BAR */
+.trust-bar{padding:48px 20px;background:#1A1A1A;color:#F5F0EB}
+.trust-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.trust-value{font-family:'Playfair Display',serif;font-size:30px;font-weight:600;color:#F5F0EB}
+.trust-label{font-size:11px;color:#8A8578;margin-top:4px;font-weight:500;letter-spacing:1px;text-transform:uppercase}
+
+/* REVIEW TICKER */
+.review-ticker{padding:44px 0;overflow:hidden;position:relative;background:#EDE8E1;border-top:1px solid #D5CFC6;border-bottom:1px solid #D5CFC6}
+.review-ticker::before{content:'';position:absolute;top:0;left:0;width:100px;height:100%;background:linear-gradient(90deg,#EDE8E1,transparent);z-index:2;pointer-events:none}
+.review-ticker::after{content:'';position:absolute;top:0;right:0;width:100px;height:100%;background:linear-gradient(-90deg,#EDE8E1,transparent);z-index:2;pointer-events:none}
+.review-track{overflow:hidden}
+.review-slide{display:flex;gap:18px;animation:scrollReviews 60s linear infinite;width:max-content}
+.review-slide:hover{animation-play-state:paused}
+.rv{flex-shrink:0;width:350px;padding:24px;border-radius:14px;background:#F5F0EB;border:1px solid #D5CFC6}
+.rv-stars{color:#D4A017;font-size:16px;letter-spacing:3px;margin-bottom:12px}
+.rv-text{font-size:15px;color:#4A4540;line-height:1.7;margin-bottom:16px;font-style:italic}
+.rv-author{display:flex;align-items:center;gap:12px}
+.rv-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;flex-shrink:0}
+.rv-name{font-size:14px;font-weight:600;color:#1A1A1A}
+.rv-loc{font-size:11px;color:#8A8578}
+
+/* SECTIONS */
+section{padding:80px 20px}
+.container{max-width:900px;margin:0 auto}
+.section-eyebrow{font-size:11px;font-weight:600;color:#8B2D3A;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.section-heading{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,42px);font-weight:600;letter-spacing:-.5px;margin-bottom:16px;line-height:1.2;color:#1A1A1A}
+.section-sub{font-size:15px;color:#8A8578;line-height:1.8;max-width:550px}
+
+/* WHY SECTION - with photo */
+.why-section{background:#F5F0EB}
+.why-top{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:48px}
+.why-text{}
+.why-photo{position:relative}
+.why-photo img{width:100%;border-radius:16px;object-fit:cover;aspect-ratio:4/5;object-position:center top;display:block}
+.why-photo-tag{position:absolute;bottom:16px;left:16px;padding:8px 14px;border-radius:8px;background:rgba(26,26,26,.85);backdrop-filter:blur(10px);color:#F5F0EB;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.why-card{padding:28px;border-radius:14px;background:#FFFFFF;border:1px solid #E8E2DA;text-align:center;transition:all .3s}
+.why-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.06);border-color:#D5CFC6}
+.why-icon{font-size:28px;margin-bottom:12px}
+.why-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;margin-bottom:6px;color:#1A1A1A}
+.why-desc{font-size:13px;color:#8A8578;line-height:1.6}
+
+/* SERVICE CARDS */
+.services-section{background:#FFFFFF}
+.services-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:48px;max-width:600px}
+.svc-card{border-radius:14px;background:#F5F0EB;border:1px solid #E8E2DA;transition:all .4s;position:relative;overflow:hidden;cursor:pointer}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:#8B2D3A;opacity:0;transition:opacity .3s}
+.svc-card:hover{border-color:#D5CFC6}
+.svc-card:hover::before{opacity:1}
+.svc-card.open{border-color:#8B2D3A40;box-shadow:0 12px 40px rgba(139,45,58,.08)}
+.svc-card.open::before{opacity:1}
+.svc-header{padding:24px;display:flex;align-items:flex-start;gap:16px}
+.svc-icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;background:#8B2D3A10;border:1px solid #8B2D3A15}
+.svc-info{flex:1}
+.svc-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:#1A1A1A;margin-bottom:4px}
+.svc-desc{font-size:13px;color:#8A8578;line-height:1.6}
+.svc-tag{display:inline-block;margin-top:10px;padding:3px 10px;border-radius:6px;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;background:#8B2D3A10;color:#8B2D3A;border:1px solid #8B2D3A15}
+.svc-toggle{width:26px;height:26px;border-radius:8px;background:#E8E2DA;display:flex;align-items:center;justify-content:center;font-size:12px;color:#8A8578;flex-shrink:0;margin-top:4px;transition:all .3s}
+.svc-card.open .svc-toggle{background:#8B2D3A15;color:#8B2D3A;transform:rotate(180deg)}
+.svc-checks{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease;padding:0 24px}
+.svc-card.open .svc-checks{max-height:600px;padding:0 24px 24px}
+.svc-checks-inner{border-top:1px solid #E8E2DA;padding-top:16px}
+.svc-checks-title{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#8B2D3A;margin-bottom:12px}
+.check-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px}
+.check-icon{width:20px;height:20px;border-radius:6px;background:#15803D12;border:1px solid #15803D25;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;color:#15803D;margin-top:1px}
+.check-text{font-size:13px;color:#6B6560;line-height:1.5}
+.check-text strong{color:#1A1A1A;font-weight:600}
+
+/* CONTACT */
+.cta-band{padding:80px 20px;text-align:center;background:#1A1A1A;color:#F5F0EB}
+.cta-band .section-eyebrow{color:#8B2D3A}
+.cta-band .section-heading{color:#F5F0EB}
+.cta-sub{font-size:15px;color:#8A8578;margin-bottom:32px;line-height:1.7}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;max-width:700px;margin:0 auto}
+.contact-card{display:flex;align-items:center;gap:14px;padding:18px 20px;border-radius:12px;background:#2A2A2A;border:1px solid #333;text-decoration:none;color:#F5F0EB;transition:all .3s}
+.contact-card:hover{border-color:#8B2D3A60;background:#8B2D3A10;transform:translateY(-2px)}
+.cc-icon2{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;background:#ffffff08;border:1px solid #ffffff10}
+.cc-lbl{font-size:10px;color:#8A8578;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+.cc-val{font-size:14px;font-weight:500;margin-top:2px}
+
+.footer{background:#111;text-align:center;padding:30px 20px;border-top:1px solid #222}
+.footer-brand{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:#8A8578;letter-spacing:2px;margin-bottom:4px}
+.footer-note{font-size:11px;color:#444;letter-spacing:1px}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+@keyframes scrollReviews{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+@media(max-width:768px){
+.why-top{grid-template-columns:1fr;text-align:center}
+.why-photo{max-width:320px;margin:0 auto}
+.trust-grid{grid-template-columns:repeat(2,1fr)}
+.services-grid{grid-template-columns:1fr}
+.contact-grid{grid-template-columns:1fr}
+.why-grid{grid-template-columns:1fr 1fr}
+section{padding:60px 20px}
+.hero-ctas{flex-direction:column;align-items:center}
+}
+@media(max-width:500px){.why-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<div class="float-icon fi1">🖊️</div>
+<div class="float-icon fi2">🏛️</div>
+<div class="float-icon fi3">🌎</div>
+<div class="float-icon fi4">📜</div>
+<div class="float-icon fi5">⚖️</div>
+<div class="float-icon fi6">🖊️</div>
+<div class="float-icon fi7">📋</div>
+<div class="float-icon fi8">🏛️</div>
+<div class="float-icon fi9">⚖️</div>
+<div class="float-icon fi10">🌎</div>
+<div class="hero-content">
+<div class="hero-badge"><span class="dot"></span> <span data-en="Available for New Clients" data-es="Disponible para Nuevos Clientes">Available for New Clients</span></div>
+<h2 style="font-family:'Playfair Display',serif;font-size:clamp(18px,3vw,24px);font-weight:400;color:#8B2D3A;letter-spacing:1px;margin-bottom:12px;animation:fadeUp .6s ease .05s both">Emma Abzueta</h2>
+<h1 class="hero-name" data-en="Professional services,<br>done right." data-es="Servicios profesionales,<br>hechos bien.">Professional services,<br>done right.</h1>
+<p class="hero-title" data-en="Bilingual Notary Public, Certified Translator, Government Specialist, and Personal Coach — serving all of South Florida in English and Spanish." data-es="Notaria Pública Bilingüe, Traductora Certificada, Especialista Gubernamental y Coach Personal — sirviendo a todo el sur de Florida en inglés y español.">Bilingual Notary Public, Certified Translator, Government Specialist, and Personal Coach — serving all of South Florida in English and Spanish.</p>
+<div class="hero-langs">
+<span class="hero-lang en active" onclick="setLang('en')">English</span>
+<span class="hero-lang es" onclick="setLang('es')">Español</span>
+</div>
+<div class="hero-ctas">
+<a href="#contact" class="btn-primary" data-en="Get In Touch →" data-es="Contáctame →">Get In Touch →</a>
+<a href="tel:9046470077" class="btn-secondary" data-en="Call Now" data-es="Llamar Ahora">Call Now</a>
+</div>
+</div>
+</div>
+
+<!-- TRUST -->
+<div class="trust-bar">
+<div class="trust-grid">
+<div class="trust-item"><div class="trust-value" id="tv-years">15+</div><div class="trust-label" data-en="Years Experience" data-es="Años de Experiencia">Years Experience</div></div>
+<div class="trust-item"><div class="trust-value">EN/ES</div><div class="trust-label" data-en="Fully Bilingual" data-es="Completamente Bilingüe">Fully Bilingual</div></div>
+<div class="trust-item"><div class="trust-value">FL ✓</div><div class="trust-label" data-en="Licensed Notary" data-es="Notaria Licenciada">Licensed Notary</div></div>
+<div class="trust-item"><div class="trust-value">B.A.</div><div class="trust-label" data-en="Psychology Degree" data-es="Lic. en Psicología">Psychology Degree</div></div>
+</div>
+</div>
+
+<!-- WHY EMMA - with photo -->
+<section class="why-section">
+<div class="container">
+<div class="why-top reveal">
+<div class="why-text">
+<div class="section-eyebrow" data-en="Why Choose Emma" data-es="Por Qué Elegir a Emma">Why Choose Emma</div>
+<div class="section-heading" data-en="One call.<br>Every service handled." data-es="Una llamada.<br>Cada servicio resuelto.">One call.<br>Every service handled.</div>
+<p class="section-sub" data-en="Most people hire 4-5 different professionals for what I handle alone. Save time, save money, get it done right — in English or Spanish." data-es="La mayoría contrata 4-5 profesionales para lo que yo manejo sola. Ahorre tiempo, ahorre dinero — en inglés o español.">Most people hire 4-5 different professionals for what I handle alone. Save time, save money, get it done right — in English or Spanish.</p>
+</div>
+<div class="why-photo">
+<img src="./emma-hero.jpg" alt="Emma Abzueta">
+<div class="why-photo-tag" data-en="Emma Abzueta · Greenacres, FL" data-es="Emma Abzueta · Greenacres, FL">Emma Abzueta · Greenacres, FL</div>
+</div>
+</div>
+<div class="why-grid">
+<div class="why-card reveal"><div class="why-icon">⚡</div><div class="why-title" data-en="One-Stop Professional" data-es="Profesional Todo-en-Uno">One-Stop Professional</div><div class="why-desc" data-en="Notary, translation, government filing, coaching — all from one trusted source." data-es="Notaría, traducción, trámites, coaching — todo de una sola fuente confiable.">Notary, translation, government filing, coaching — all from one trusted source.</div></div>
+<div class="why-card reveal"><div class="why-icon">🌎</div><div class="why-title" data-en="100% Bilingual" data-es="100% Bilingüe">100% Bilingual</div><div class="why-desc" data-en="Fluent English and Spanish — written and spoken. No miscommunication." data-es="Inglés y español fluido. Sin malentendidos.">Fluent English and Spanish — written and spoken. No miscommunication.</div></div>
+<div class="why-card reveal"><div class="why-icon">🛡️</div><div class="why-title" data-en="15+ Years Trusted" data-es="15+ Años de Confianza">15+ Years Trusted</div><div class="why-desc" data-en="Over a decade managing federal contracts, legal documents, and sensitive paperwork." data-es="Más de una década gestionando contratos federales y documentos legales.">Over a decade managing federal contracts, legal documents, and sensitive paperwork.</div></div>
+<div class="why-card reveal"><div class="why-icon">❤️</div><div class="why-title" data-en="Community First" data-es="Comunidad Primero">Community First</div><div class="why-desc" data-en="From teaching special needs students to citizenship prep — I help people navigate complex systems." data-es="Desde estudiantes especiales hasta ciudadanía — ayudo a navegar sistemas complejos.">From teaching special needs students to citizenship prep — I help people navigate complex systems.</div></div>
+<div class="why-card reveal"><div class="why-icon">⏱️</div><div class="why-title" data-en="Fast & Reliable" data-es="Rápida y Confiable">Fast & Reliable</div><div class="why-desc" data-en="Same-day availability for urgent notarizations. Deadlines met, documents delivered, no excuses." data-es="Disponibilidad el mismo día para notarizaciones urgentes. Plazos cumplidos, documentos entregados, sin excusas.">Same-day availability for urgent notarizations. Deadlines met, documents delivered, no excuses.</div></div>
+<div class="why-card reveal"><div class="why-icon">🤝</div><div class="why-title" data-en="Trusted Confidentiality" data-es="Confidencialidad Garantizada">Trusted Confidentiality</div><div class="why-desc" data-en="Your legal, medical, and personal documents handled with absolute discretion and professional care." data-es="Sus documentos legales, médicos y personales manejados con absoluta discreción y cuidado profesional.">Your legal, medical, and personal documents handled with absolute discretion and professional care.</div></div>
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section">
+<div class="container">
+<div class="section-eyebrow reveal" data-en="Services" data-es="Servicios">Services</div>
+<div class="section-heading reveal" data-en="Everything you need. One professional." data-es="Todo lo que necesita. Una profesional.">Everything you need. One professional.</div>
+<p class="section-sub reveal" data-en="Tap any service to see the full breakdown." data-es="Toque cualquier servicio para ver el desglose.">Tap any service to see the full breakdown.</p>
+<div class="services-grid">
+<div class="svc-card reveal" onclick="toggleCard(this)"><div class="svc-header"><div class="svc-icon">📜</div><div class="svc-info"><div class="svc-name" data-en="Notary Public" data-es="Notaria Pública">Notary Public</div><div class="svc-desc" data-en="Full-service mobile notarization across South Florida." data-es="Notarización móvil completa en todo el sur de Florida.">Full-service mobile notarization across South Florida.</div><div class="svc-tag" data-en="State of Florida Licensed" data-es="Licenciada · Estado de Florida">State of Florida Licensed</div></div><div class="svc-toggle">▼</div></div><div class="svc-checks"><div class="svc-checks-inner"><div class="svc-checks-title" data-en="What's Included" data-es="Qué Incluye">What's Included</div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Acknowledgements</strong> — Identity verification & signing</div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Jurats & Affidavits</strong> — Sworn statements</div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Power of Attorney</strong></div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Marriage Solemnization</strong></div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Vehicle Title Transfers</strong> & VIN Verification</div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Loan Closings</strong> & Real Estate</div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Travel Authorization</strong> for Minors</div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>School Permits</strong> & Certifications</div></div></div></div></div>
+
+<div class="svc-card reveal" onclick="toggleCard(this)"><div class="svc-header"><div class="svc-icon">🌐</div><div class="svc-info"><div class="svc-name" data-en="Certified Translation" data-es="Traducción Certificada">Certified Translation</div><div class="svc-desc" data-en="Professional document translation, English and Spanish." data-es="Traducción profesional, inglés y español.">Professional document translation, English and Spanish.</div><div class="svc-tag" data-en="English ↔ Spanish" data-es="Inglés ↔ Español">English ↔ Spanish</div></div><div class="svc-toggle">▼</div></div><div class="svc-checks"><div class="svc-checks-inner"><div class="svc-checks-title" data-en="What's Included" data-es="Qué Incluye">What's Included</div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Legal Documents</strong> — Contracts, court filings</div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Medical Documents</strong> — Records, forms</div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Government Forms</strong> — Applications, permits</div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Personal Documents</strong> — Birth certs, diplomas</div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Certified & Confidential</strong></div></div></div></div></div>
+
+<div class="svc-card reveal" onclick="toggleCard(this)"><div class="svc-header"><div class="svc-icon">🏛️</div><div class="svc-info"><div class="svc-name" data-en="Government & Federal" data-es="Gobierno y Federal">Government & Federal</div><div class="svc-desc" data-en="Federal bids, government filings, business registration." data-es="Licitaciones federales, trámites, registro de empresas.">Federal bids, government filings, business registration.</div><div class="svc-tag" data-en="10+ Years Experience" data-es="10+ Años de Experiencia">10+ Years Experience</div></div><div class="svc-toggle">▼</div></div><div class="svc-checks"><div class="svc-checks-inner"><div class="svc-checks-title" data-en="What's Included" data-es="Qué Incluye">What's Included</div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Federal Bid Research</strong></div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Bid Processing</strong> — Start to finish</div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Small Business Certification</strong></div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Government Paperwork Filing</strong></div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Driving License Facilitation</strong></div></div></div></div></div>
+
+<div class="svc-card reveal" onclick="toggleCard(this)"><div class="svc-header"><div class="svc-icon">🧠</div><div class="svc-info"><div class="svc-name" data-en="Personal Coaching" data-es="Coaching Personal">Personal Coaching</div><div class="svc-desc" data-en="Life coaching grounded in psychology and teaching." data-es="Coaching de vida basado en psicología.">Life coaching grounded in psychology and teaching.</div><div class="svc-tag" data-en="B.A. Psychology" data-es="Lic. Psicología">B.A. Psychology</div></div><div class="svc-toggle">▼</div></div><div class="svc-checks"><div class="svc-checks-inner"><div class="svc-checks-title" data-en="What's Included" data-es="Qué Incluye">What's Included</div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Personal Development</strong></div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Interpersonal Relationships</strong></div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Organization & Life Skills</strong></div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Bilingual Sessions</strong></div></div></div></div></div>
+
+<div class="svc-card reveal" onclick="toggleCard(this)"><div class="svc-header"><div class="svc-icon">🇺🇸</div><div class="svc-info"><div class="svc-name" data-en="Citizenship Preparation" data-es="Preparación para Ciudadanía">Citizenship Preparation</div><div class="svc-desc" data-en="Complete U.S. citizenship guidance." data-es="Orientación completa para ciudadanía.">Complete U.S. citizenship guidance.</div><div class="svc-tag" data-en="Bilingual Support" data-es="Apoyo Bilingüe">Bilingual Support</div></div><div class="svc-toggle">▼</div></div><div class="svc-checks"><div class="svc-checks-inner"><div class="svc-checks-title" data-en="What's Included" data-es="Qué Incluye">What's Included</div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Application Assistance</strong></div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Interview Preparation</strong></div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Document Organization</strong></div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Full Bilingual Support</strong></div></div></div></div></div>
+
+<div class="svc-card reveal" onclick="toggleCard(this)"><div class="svc-header"><div class="svc-icon">📋</div><div class="svc-info"><div class="svc-name" data-en="Administrative Services" data-es="Servicios Administrativos">Administrative Services</div><div class="svc-desc" data-en="Professional admin support." data-es="Apoyo administrativo profesional.">Professional admin support.</div><div class="svc-tag" data-en="Full-Service" data-es="Servicio Completo">Full-Service</div></div><div class="svc-toggle">▼</div></div><div class="svc-checks"><div class="svc-checks-inner"><div class="svc-checks-title" data-en="What's Included" data-es="Qué Incluye">What's Included</div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Resume Building</strong></div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Data Entry & Management</strong></div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Customer Service Support</strong></div></div><div class="check-item"><div class="check-icon">✓</div><div class="check-text"><strong>Office Administration</strong></div></div></div></div></div>
+</div>
+</div>
+</section>
+
+<!-- REVIEWS -->
+<div class="review-ticker">
+<div class="review-track"><div class="review-slide">
+<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"Emma handled my entire loan closing in both English and Spanish. Flawless."</div><div class="rv-author"><div class="rv-avatar" style="background:#8B2D3A">M</div><div><div class="rv-name">Maria G.</div><div class="rv-loc">West Palm Beach, FL</div></div></div></div>
+<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"12 documents translated for my immigration case. Fast, accurate, and so caring."</div><div class="rv-author"><div class="rv-avatar" style="background:#5B4A3F">C</div><div><div class="rv-name">Carlos R.</div><div class="rv-loc">Fort Lauderdale, FL</div></div></div></div>
+<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"She explained every step in Spanish to my mother. So patient and professional."</div><div class="rv-author"><div class="rv-avatar" style="background:#7A6B5D">L</div><div><div class="rv-name">Luisa M.</div><div class="rv-loc">Greenacres, FL</div></div></div></div>
+<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"Helped me prep for my citizenship interview. Passed on the first try!"</div><div class="rv-author"><div class="rv-avatar" style="background:#4A6741">J</div><div><div class="rv-name">Jorge P.</div><div class="rv-loc">Boynton Beach, FL</div></div></div></div>
+<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"Last-minute notary for a real estate closing. Emma showed up in 30 minutes."</div><div class="rv-author"><div class="rv-avatar" style="background:#8B2D3A">D</div><div><div class="rv-name">Diana T.</div><div class="rv-loc">Lake Worth, FL</div></div></div></div>
+<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"Translated my son's school records AND filed his enrollment. All in one visit."</div><div class="rv-author"><div class="rv-avatar" style="background:#5B6B7A">A</div><div><div class="rv-name">Ana S.</div><div class="rv-loc">Riviera Beach, FL</div></div></div></div>
+<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"3 years of federal bid paperwork. She never misses a deadline. Ever."</div><div class="rv-author"><div class="rv-avatar" style="background:#6B5B4A">R</div><div><div class="rv-name">Robert K.</div><div class="rv-loc">Boca Raton, FL</div></div></div></div>
+<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"The coaching sessions changed my life. Emma truly cares about people."</div><div class="rv-author"><div class="rv-avatar" style="background:#8B2D3A">S</div><div><div class="rv-name">Sandra V.</div><div class="rv-loc">Delray Beach, FL</div></div></div></div>
+<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"Emma handled my entire loan closing in both English and Spanish. Flawless."</div><div class="rv-author"><div class="rv-avatar" style="background:#8B2D3A">M</div><div><div class="rv-name">Maria G.</div><div class="rv-loc">West Palm Beach, FL</div></div></div></div>
+<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"12 documents translated for my immigration case. Fast, accurate, and so caring."</div><div class="rv-author"><div class="rv-avatar" style="background:#5B4A3F">C</div><div><div class="rv-name">Carlos R.</div><div class="rv-loc">Fort Lauderdale, FL</div></div></div></div>
+<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"She explained every step in Spanish to my mother. So patient and professional."</div><div class="rv-author"><div class="rv-avatar" style="background:#7A6B5D">L</div><div><div class="rv-name">Luisa M.</div><div class="rv-loc">Greenacres, FL</div></div></div></div>
+<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"Helped me prep for my citizenship interview. Passed on the first try!"</div><div class="rv-author"><div class="rv-avatar" style="background:#4A6741">J</div><div><div class="rv-name">Jorge P.</div><div class="rv-loc">Boynton Beach, FL</div></div></div></div>
+<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"Last-minute notary for a real estate closing. Emma showed up in 30 minutes."</div><div class="rv-author"><div class="rv-avatar" style="background:#8B2D3A">D</div><div><div class="rv-name">Diana T.</div><div class="rv-loc">Lake Worth, FL</div></div></div></div>
+<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"Translated my son's school records AND filed his enrollment. All in one visit."</div><div class="rv-author"><div class="rv-avatar" style="background:#5B6B7A">A</div><div><div class="rv-name">Ana S.</div><div class="rv-loc">Riviera Beach, FL</div></div></div></div>
+<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"3 years of federal bid paperwork. She never misses a deadline. Ever."</div><div class="rv-author"><div class="rv-avatar" style="background:#6B5B4A">R</div><div><div class="rv-name">Robert K.</div><div class="rv-loc">Boca Raton, FL</div></div></div></div>
+<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"The coaching sessions changed my life. Emma truly cares about people."</div><div class="rv-author"><div class="rv-avatar" style="background:#8B2D3A">S</div><div><div class="rv-name">Sandra V.</div><div class="rv-loc">Delray Beach, FL</div></div></div></div>
+</div></div>
+</div>
+
+<!-- CONTACT -->
+<section class="cta-band" id="contact">
+<div class="container">
+<div class="section-eyebrow reveal" data-en="Contact" data-es="Contacto">Contact</div>
+<div class="section-heading reveal" data-en="Ready to get started?" data-es="¿Lista para comenzar?">Ready to get started?</div>
+<p class="cta-sub reveal" data-en="Call, email, or send a message — I respond within 24 hours." data-es="Llame, envíe un correo o mensaje — respondo en 24 horas.">Call, email, or send a message — I respond within 24 hours.</p>
+<div class="contact-grid reveal">
+<a href="tel:9046470077" class="contact-card"><div class="cc-icon2">📞</div><div><div class="cc-lbl" data-en="Phone" data-es="Teléfono">Phone</div><div class="cc-val">(904) 647-0077</div></div></a>
+<a href="mailto:abzuetahdz@gmail.com" class="contact-card"><div class="cc-icon2">✉️</div><div><div class="cc-lbl" data-en="Email" data-es="Correo">Email</div><div class="cc-val">abzuetahdz@gmail.com</div></div></a>
+<a href="mailto:abzservices@outlook.com" class="contact-card"><div class="cc-icon2">💼</div><div><div class="cc-lbl" data-en="Business" data-es="Negocios">Business</div><div class="cc-val">abzservices@outlook.com</div></div></a>
+<div class="contact-card"><div class="cc-icon2">📍</div><div><div class="cc-lbl" data-en="Location" data-es="Ubicación">Location</div><div class="cc-val" data-en="Greenacres, FL" data-es="Greenacres, FL">Greenacres, FL</div></div></div>
+</div>
+</div>
+</section>
+
+<div class="footer">
+<div class="footer-brand">EMMA ABZUETA</div>
+<div class="footer-note" data-en="Professional Bilingual Services · South Florida" data-es="Servicios Profesionales Bilingües · Sur de Florida">Professional Bilingual Services · South Florida</div>
+</div>
+
+<script>
+function setLang(lang){
+document.querySelectorAll('.hero-lang').forEach(function(el){el.classList.remove('active')});
+document.querySelector('.hero-lang.'+lang).classList.add('active');
+document.querySelectorAll('[data-'+lang+']').forEach(function(el){
+var t=el.getAttribute('data-'+lang);if(t)el.innerHTML=t;
+});
+document.documentElement.lang=lang;
+}
+function toggleCard(card){
+var wasOpen=card.classList.contains('open');
+document.querySelectorAll('.svc-card.open').forEach(function(c){c.classList.remove('open')});
+if(!wasOpen){
+card.classList.add('open');
+setTimeout(function(){card.scrollIntoView({behavior:'smooth',block:'nearest'});},100);
+}
+}
+var reveals=document.querySelectorAll('.reveal');
+function checkReveal(){
+reveals.forEach(function(el){
+if(el.getBoundingClientRect().top<window.innerHeight-60) el.classList.add('visible');
+});
+}
+window.addEventListener('scroll',checkReveal);
+checkReveal();
+var counted=false;
+function animateCounter(){
+if(counted) return;
+var el=document.getElementById('tv-years');
+if(!el) return;
+if(el.getBoundingClientRect().top<window.innerHeight){
+counted=true;var n=0;
+var i=setInterval(function(){n++;el.textContent=n+'+';if(n>=15)clearInterval(i);},60);
+}
+}
+window.addEventListener('scroll',animateCounter);
+animateCounter();
+</script>
+</body>
+</html>
