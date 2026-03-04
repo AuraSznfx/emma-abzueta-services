@@ -121,6 +121,39 @@ section{padding:80px 20px}
 .cc-val{font-size:14px;font-weight:500;margin-top:2px}
 
 .footer{background:#111;text-align:center;padding:30px 20px;border-top:1px solid #222}
+
+/* IMPACT STATS */
+.stats-band{padding:60px 20px;background:#1A1A1A;text-align:center}
+.stats-band .section-eyebrow{color:#8B2D3A}
+.stats-band .section-heading{color:#F5F0EB;margin-bottom:40px}
+.stats-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stat-card{padding:28px 16px}
+.stat-number{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,48px);font-weight:600;color:#F5F0EB;line-height:1}
+.stat-number .stat-plus{color:#8B2D3A}
+.stat-label{font-size:12px;color:#8A8578;margin-top:8px;letter-spacing:.5px;line-height:1.5}
+
+/* FAQ */
+.faq-section{background:#F5F0EB}
+.faq-grid{max-width:650px;margin-top:40px}
+.faq-item{border-bottom:1px solid #E8E2DA;cursor:pointer}
+.faq-q{padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q-text{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:#1A1A1A}
+.faq-arrow{width:28px;height:28px;border-radius:8px;background:#E8E2DA;display:flex;align-items:center;justify-content:center;font-size:12px;color:#8A8578;flex-shrink:0;transition:all .3s}
+.faq-item.open .faq-arrow{background:#8B2D3A15;color:#8B2D3A;transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease}
+.faq-item.open .faq-a{max-height:200px;padding-bottom:20px}
+.faq-a-text{font-size:14px;color:#8A8578;line-height:1.8}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);z-index:999;text-decoration:none;transition:all .3s;cursor:pointer}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 30px rgba(37,211,102,.5)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+.wa-pulse{position:absolute;inset:-4px;border-radius:50%;border:2px solid #25D366;animation:waPulse 2s infinite;pointer-events:none}
+@keyframes waPulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.4);opacity:0}}
+
+@media(max-width:768px){
+.stats-grid{grid-template-columns:repeat(2,1fr)}
+}
 .footer-brand{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:#8A8578;letter-spacing:2px;margin-bottom:4px}
 .footer-note{font-size:11px;color:#444;letter-spacing:1px}
 
@@ -268,6 +301,42 @@ section{padding:60px 20px}
 </div>
 </section>
 
+<!-- IMPACT STATS -->
+<div class="stats-band">
+<div class="container">
+<div class="section-eyebrow reveal" data-en="The Numbers" data-es="Los Números">The Numbers</div>
+<div class="section-heading reveal" data-en="Results that speak for themselves." data-es="Resultados que hablan por sí solos.">Results that speak for themselves.</div>
+<div class="stats-grid">
+<div class="stat-card reveal"><div class="stat-number"><span id="stat1">1,500</span><span class="stat-plus">+</span></div><div class="stat-label" data-en="Documents Processed" data-es="Documentos Procesados">Documents Processed</div></div>
+<div class="stat-card reveal"><div class="stat-number"><span id="stat2">500</span><span class="stat-plus">+</span></div><div class="stat-label" data-en="Clients Served" data-es="Clientes Atendidos">Clients Served</div></div>
+<div class="stat-card reveal"><div class="stat-number"><span id="stat3">15</span><span class="stat-plus">+</span></div><div class="stat-label" data-en="Years of Experience" data-es="Años de Experiencia">Years of Experience</div></div>
+<div class="stat-card reveal"><div class="stat-number"><span id="stat4">100</span><span class="stat-plus">%</span></div><div class="stat-label" data-en="Client Satisfaction" data-es="Satisfacción del Cliente">Client Satisfaction</div></div>
+</div>
+</div>
+</div>
+
+<!-- FAQ -->
+<section class="faq-section">
+<div class="container">
+<div class="section-eyebrow reveal" data-en="Common Questions" data-es="Preguntas Frecuentes">Common Questions</div>
+<div class="section-heading reveal" data-en="Everything you need to know." data-es="Todo lo que necesita saber.">Everything you need to know.</div>
+<div class="faq-grid">
+<div class="faq-item reveal" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text" data-en="Do you offer mobile notary services?" data-es="¿Ofrece servicios de notaría móvil?">Do you offer mobile notary services?</div><div class="faq-arrow">▼</div></div><div class="faq-a"><div class="faq-a-text" data-en="Yes! I travel to you anywhere in South Florida — your home, office, hospital, or any location that's convenient. Same-day availability for urgent needs." data-es="¡Sí! Viajo a cualquier lugar en el sur de Florida — su hogar, oficina, hospital o cualquier ubicación conveniente. Disponibilidad el mismo día para urgencias.">Yes! I travel to you anywhere in South Florida — your home, office, hospital, or any location that's convenient. Same-day availability for urgent needs.</div></div></div>
+<div class="faq-item reveal" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text" data-en="How fast can you translate documents?" data-es="¿Qué tan rápido puede traducir documentos?">How fast can you translate documents?</div><div class="faq-arrow">▼</div></div><div class="faq-a"><div class="faq-a-text" data-en="Standard turnaround is 24-48 hours depending on document length. Rush services are available for urgent needs — just ask." data-es="El tiempo estándar es de 24-48 horas dependiendo de la longitud. Servicios urgentes disponibles — solo pregunte.">Standard turnaround is 24-48 hours depending on document length. Rush services are available for urgent needs — just ask.</div></div></div>
+<div class="faq-item reveal" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text" data-en="Are your translations accepted by courts and USCIS?" data-es="¿Son sus traducciones aceptadas por tribunales y USCIS?">Are your translations accepted by courts and USCIS?</div><div class="faq-arrow">▼</div></div><div class="faq-a"><div class="faq-a-text" data-en="Absolutely. All translations come with a certificate of accuracy and are accepted by courts, USCIS, schools, and government agencies." data-es="Absolutamente. Todas las traducciones incluyen un certificado de precisión y son aceptadas por tribunales, USCIS, escuelas y agencias gubernamentales.">Absolutely. All translations come with a certificate of accuracy and are accepted by courts, USCIS, schools, and government agencies.</div></div></div>
+<div class="faq-item reveal" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text" data-en="What areas of South Florida do you serve?" data-es="¿Qué áreas del sur de Florida atiende?">What areas of South Florida do you serve?</div><div class="faq-arrow">▼</div></div><div class="faq-a"><div class="faq-a-text" data-en="I serve all of South Florida including West Palm Beach, Greenacres, Lake Worth, Boynton Beach, Delray Beach, Boca Raton, Fort Lauderdale, and surrounding areas." data-es="Atiendo todo el sur de Florida incluyendo West Palm Beach, Greenacres, Lake Worth, Boynton Beach, Delray Beach, Boca Raton, Fort Lauderdale y áreas circundantes.">I serve all of South Florida including West Palm Beach, Greenacres, Lake Worth, Boynton Beach, Delray Beach, Boca Raton, Fort Lauderdale, and surrounding areas.</div></div></div>
+<div class="faq-item reveal" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text" data-en="Do I need an appointment?" data-es="¿Necesito cita?">Do I need an appointment?</div><div class="faq-arrow">▼</div></div><div class="faq-a"><div class="faq-a-text" data-en="I recommend calling or texting ahead so I can be fully prepared, but I accommodate same-day requests whenever possible." data-es="Recomiendo llamar o enviar un mensaje con anticipación, pero atiendo solicitudes del mismo día siempre que sea posible.">I recommend calling or texting ahead so I can be fully prepared, but I accommodate same-day requests whenever possible.</div></div></div>
+<div class="faq-item reveal" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text" data-en="Can you help with languages other than Spanish?" data-es="¿Puede ayudar con otros idiomas además del español?">Can you help with languages other than Spanish?</div><div class="faq-arrow">▼</div></div><div class="faq-a"><div class="faq-a-text" data-en="My certified translation services are for English and Spanish. For other languages, I can connect you with trusted colleagues in my professional network." data-es="Mis traducciones certificadas son para inglés y español. Para otros idiomas, puedo conectarle con colegas de mi red profesional.">My certified translation services are for English and Spanish. For other languages, I can connect you with trusted colleagues in my professional network.</div></div></div>
+</div>
+</div>
+</section>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/19046470077" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+<div class="wa-pulse"></div>
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
 <div class="footer">
 <div class="footer-brand">EMMA ABZUETA</div>
 <div class="footer-note" data-en="Professional Bilingual Services · South Florida" data-es="Servicios Profesionales Bilingües · Sur de Florida">Professional Bilingual Services · South Florida</div>
@@ -290,6 +359,11 @@ card.classList.add('open');
 setTimeout(function(){card.scrollIntoView({behavior:'smooth',block:'nearest'});},100);
 }
 }
+function toggleFaq(item){
+var wasOpen=item.classList.contains('open');
+document.querySelectorAll('.faq-item.open').forEach(function(f){f.classList.remove('open')});
+if(!wasOpen) item.classList.add('open');
+}
 var reveals=document.querySelectorAll('.reveal');
 function checkReveal(){
 reveals.forEach(function(el){
@@ -310,6 +384,32 @@ var i=setInterval(function(){n++;el.textContent=n+'+';if(n>=15)clearInterval(i);
 }
 window.addEventListener('scroll',animateCounter);
 animateCounter();
+
+// Stats counter animation
+var statsCounted=false;
+function animateStats(){
+if(statsCounted) return;
+var el=document.getElementById('stat1');
+if(!el) return;
+if(el.getBoundingClientRect().top<window.innerHeight){
+statsCounted=true;
+function countUp(id,target,suffix,duration){
+var elem=document.getElementById(id);
+var start=0;var steps=40;var increment=target/steps;var current=0;
+var interval=setInterval(function(){
+current+=increment;
+if(current>=target){current=target;clearInterval(interval);}
+elem.textContent=Math.floor(current).toLocaleString();
+},duration/steps);
+}
+countUp('stat1',1500,'',1200);
+countUp('stat2',500,'',1000);
+countUp('stat3',15,'',800);
+countUp('stat4',100,'',900);
+}
+}
+window.addEventListener('scroll',animateStats);
+animateStats();
 </script>
 </body>
 </html>
