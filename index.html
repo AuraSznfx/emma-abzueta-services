@@ -108,6 +108,20 @@ section{padding:80px 20px}
 .check-text{font-size:13px;color:#6B6560;line-height:1.5}
 .check-text strong{color:#1A1A1A;font-weight:600}
 
+/* URGENCY CTA */
+.urgency-band{padding:60px 20px;background:linear-gradient(135deg,#8B2D3A,#6B1D2A);text-align:center;position:relative;overflow:hidden}
+.urgency-band::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.urgency-inner{position:relative;z-index:1;max-width:600px;margin:0 auto}
+.urgency-flag{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:50px;background:#ffffff15;border:1px solid #ffffff20;font-size:12px;font-weight:600;color:#fff;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+.urgency-flag .uf-dot{width:8px;height:8px;border-radius:50%;background:#22C55E;animation:pulse 1.5s infinite}
+.urgency-heading{font-family:'Playfair Display',serif;font-size:clamp(24px,4vw,36px);font-weight:600;color:#fff;line-height:1.2;margin-bottom:12px}
+.urgency-sub{font-size:15px;color:#ffffff90;line-height:1.7;margin-bottom:28px}
+.urgency-ctas{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn-urgency{padding:16px 36px;border-radius:8px;background:#fff;color:#8B2D3A;font-weight:700;font-size:14px;letter-spacing:.5px;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.btn-urgency:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.3)}
+.btn-urgency-alt{padding:16px 36px;border-radius:8px;background:transparent;border:1px solid #ffffff40;color:#fff;font-weight:600;font-size:14px;letter-spacing:.5px;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.btn-urgency-alt:hover{background:#ffffff15;border-color:#ffffff60}
+
 /* CONTACT */
 .cta-band{padding:80px 20px;text-align:center;background:#1A1A1A;color:#F5F0EB}
 .cta-band .section-eyebrow{color:#8B2D3A}
@@ -264,6 +278,19 @@ section{padding:60px 20px}
 </div>
 </section>
 
+<!-- URGENCY CTA -->
+<div class="urgency-band">
+<div class="urgency-inner">
+<div class="urgency-flag"><span class="uf-dot"></span> <span data-en="Limited Availability This Week" data-es="Disponibilidad Limitada Esta Semana">Limited Availability This Week</span></div>
+<div class="urgency-heading" data-en="Free consultation.<br>No obligation. No pressure." data-es="Consulta gratuita.<br>Sin compromiso. Sin presión.">Free consultation.<br>No obligation. No pressure.</div>
+<div class="urgency-sub" data-en="Spots fill up fast — especially during tax season, immigration deadlines, and real estate closings. Call now to secure your time slot and get a free quote on any service." data-es="Los espacios se llenan rápido — especialmente durante temporada de impuestos, plazos de inmigración y cierres inmobiliarios. Llame ahora para reservar su horario y obtener una cotización gratuita.">Spots fill up fast — especially during tax season, immigration deadlines, and real estate closings. Call now to secure your time slot and get a free quote on any service.</div>
+<div class="urgency-ctas">
+<a href="tel:9046470077" class="btn-urgency" data-en="📞 Call For Free Quote" data-es="📞 Llame Para Cotización Gratis">📞 Call For Free Quote</a>
+<a href="https://wa.me/19046470077" target="_blank" class="btn-urgency-alt" data-en="💬 WhatsApp Me" data-es="💬 Escríbame por WhatsApp">💬 WhatsApp Me</a>
+</div>
+</div>
+</div>
+
 <!-- REVIEWS -->
 <div class="review-ticker">
 <div class="review-track"><div class="review-slide">
@@ -294,8 +321,8 @@ section{padding:60px 20px}
 <p class="cta-sub reveal" data-en="Call, email, or send a message — I respond within 24 hours." data-es="Llame, envíe un correo o mensaje — respondo en 24 horas.">Call, email, or send a message — I respond within 24 hours.</p>
 <div class="contact-grid reveal">
 <a href="tel:9046470077" class="contact-card"><div class="cc-icon2">📞</div><div><div class="cc-lbl" data-en="Phone" data-es="Teléfono">Phone</div><div class="cc-val">(904) 647-0077</div></div></a>
-<a href="mailto:abzuetahdz@gmail.com" class="contact-card"><div class="cc-icon2">✉️</div><div><div class="cc-lbl" data-en="Email" data-es="Correo">Email</div><div class="cc-val">abzuetahdz@gmail.com</div></div></a>
-<a href="mailto:abzservices@outlook.com" class="contact-card"><div class="cc-icon2">💼</div><div><div class="cc-lbl" data-en="Business" data-es="Negocios">Business</div><div class="cc-val">abzservices@outlook.com</div></div></a>
+<a href="/cdn-cgi/l/email-protection#8eefecf4fbebfaefe6eaf4cee9e3efe7e2a0ede1e3" class="contact-card"><div class="cc-icon2">✉️</div><div><div class="cc-lbl" data-en="Email" data-es="Correo">Email</div><div class="cc-val"><span class="__cf_email__" data-cfemail="f9989b838c9c8d98919d83b99e94989095d79a9694">[email&#160;protected]</span></div></div></a>
+<a href="/cdn-cgi/l/email-protection#2544475f564057534c464056654a5051494a4a4e0b464a48" class="contact-card"><div class="cc-icon2">💼</div><div><div class="cc-lbl" data-en="Business" data-es="Negocios">Business</div><div class="cc-val"><span class="__cf_email__" data-cfemail="5534372f263027233c363026153a2021393a3a3e7b363a38">[email&#160;protected]</span></div></div></a>
 <div class="contact-card"><div class="cc-icon2">📍</div><div><div class="cc-lbl" data-en="Location" data-es="Ubicación">Location</div><div class="cc-val" data-en="Greenacres, FL" data-es="Greenacres, FL">Greenacres, FL</div></div></div>
 </div>
 </div>
@@ -342,7 +369,7 @@ section{padding:60px 20px}
 <div class="footer-note" data-en="Professional Bilingual Services · South Florida" data-es="Servicios Profesionales Bilingües · Sur de Florida">Professional Bilingual Services · South Florida</div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function setLang(lang){
 document.querySelectorAll('.hero-lang').forEach(function(el){el.classList.remove('active')});
 document.querySelector('.hero-lang.'+lang).classList.add('active');
@@ -396,20 +423,4 @@ statsCounted=true;
 function countUp(id,target,suffix,duration){
 var elem=document.getElementById(id);
 var start=0;var steps=40;var increment=target/steps;var current=0;
-var interval=setInterval(function(){
-current+=increment;
-if(current>=target){current=target;clearInterval(interval);}
-elem.textContent=Math.floor(current).toLocaleString();
-},duration/steps);
-}
-countUp('stat1',1500,'',1200);
-countUp('stat2',500,'',1000);
-countUp('stat3',15,'',800);
-countUp('stat4',100,'',900);
-}
-}
-window.addEventListener('scroll',animateStats);
-animateStats();
-</script>
-</body>
-</html>
+var interval=setIn
