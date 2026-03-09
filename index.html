@@ -108,6 +108,16 @@ section{padding:80px 20px}
 .check-text{font-size:13px;color:#6B6560;line-height:1.5}
 .check-text strong{color:#1A1A1A;font-weight:600}
 
+/* CERTIFICATION */
+.cert-section{background:#FFFFFF;border-top:1px solid #E8E2DA}
+.cert-card{display:flex;align-items:center;gap:20px;padding:28px;border-radius:14px;background:#F5F0EB;border:1px solid #E8E2DA;max-width:600px}
+.cert-icon{width:56px;height:56px;border-radius:14px;background:#15803D12;border:1px solid #15803D25;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0}
+.cert-info{flex:1}
+.cert-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:#1A1A1A;margin-bottom:4px}
+.cert-detail{font-size:14px;color:#6B6560;line-height:1.6;margin-bottom:8px}
+.cert-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#8B2D3A;text-decoration:none;transition:all .3s}
+.cert-link:hover{color:#6B1D2A;gap:10px}
+
 /* URGENCY CTA */
 .urgency-band{padding:60px 20px;background:linear-gradient(135deg,#8B2D3A,#6B1D2A);text-align:center;position:relative;overflow:hidden}
 .urgency-band::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
@@ -171,9 +181,6 @@ section{padding:80px 20px}
 .footer-brand{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:#8A8578;letter-spacing:2px;margin-bottom:4px}
 .footer-note{font-size:11px;color:#444;letter-spacing:1px}
 
-
-
-
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 @keyframes scrollReviews{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
@@ -187,6 +194,7 @@ section{padding:80px 20px}
 .why-grid{grid-template-columns:1fr 1fr}
 section{padding:60px 20px}
 .hero-ctas{flex-direction:column;align-items:center}
+.cert-card{flex-direction:column;text-align:center}
 }
 @media(max-width:500px){.why-grid{grid-template-columns:1fr}}
 </style>
@@ -278,6 +286,22 @@ section{padding:60px 20px}
 </div>
 </section>
 
+<!-- CERTIFICATION -->
+<section class="cert-section">
+<div class="container">
+<div class="section-eyebrow" data-en="Certification" data-es="Certificación">Certification</div>
+<div class="section-heading" data-en="Licensed & Verified" data-es="Licenciada y Verificada">Licensed & Verified</div>
+<div class="cert-card">
+<div class="cert-icon">🏛️</div>
+<div class="cert-info">
+<div class="cert-title" data-en="State of Florida Notary Public" data-es="Notaria Pública del Estado de Florida">State of Florida Notary Public</div>
+<div class="cert-detail" data-en="Commissioned July 2017 — July 2026. Assisting the community with all Notary Public services." data-es="Comisionada Julio 2017 — Julio 2026. Asistiendo a la comunidad con todos los servicios de Notaría Pública.">Commissioned July 2017 — July 2026. Assisting the community with all Notary Public services.</div>
+<a href="https://www.signngagent.com/profile/160267147" target="_blank" class="cert-link" data-en="View Verified Profile →" data-es="Ver Perfil Verificado →">View Verified Profile →</a>
+</div>
+</div>
+</div>
+</section>
+
 <!-- URGENCY CTA -->
 <div class="urgency-band">
 <div class="urgency-inner">
@@ -291,7 +315,7 @@ section{padding:60px 20px}
 </div>
 </div>
 
-<!-- REVIEWS -->
+<!-- REVIEWS (Ana S. school records review removed per Emma's request) -->
 <div class="review-ticker">
 <div class="review-track"><div class="review-slide">
 <div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"Emma handled my entire loan closing in both English and Spanish. Flawless."</div><div class="rv-author"><div class="rv-avatar" style="background:#8B2D3A">M</div><div><div class="rv-name">Maria G.</div><div class="rv-loc">West Palm Beach, FL</div></div></div></div>
@@ -299,15 +323,14 @@ section{padding:60px 20px}
 <div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"She explained every step in Spanish to my mother. So patient and professional."</div><div class="rv-author"><div class="rv-avatar" style="background:#7A6B5D">L</div><div><div class="rv-name">Luisa M.</div><div class="rv-loc">Greenacres, FL</div></div></div></div>
 <div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"Helped me prep for my citizenship interview. Passed on the first try!"</div><div class="rv-author"><div class="rv-avatar" style="background:#4A6741">J</div><div><div class="rv-name">Jorge P.</div><div class="rv-loc">Boynton Beach, FL</div></div></div></div>
 <div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"Last-minute notary for a real estate closing. Emma showed up in 30 minutes."</div><div class="rv-author"><div class="rv-avatar" style="background:#8B2D3A">D</div><div><div class="rv-name">Diana T.</div><div class="rv-loc">Lake Worth, FL</div></div></div></div>
-<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"Translated my son's school records AND filed his enrollment. All in one visit."</div><div class="rv-author"><div class="rv-avatar" style="background:#5B6B7A">A</div><div><div class="rv-name">Ana S.</div><div class="rv-loc">Riviera Beach, FL</div></div></div></div>
 <div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"3 years of federal bid paperwork. She never misses a deadline. Ever."</div><div class="rv-author"><div class="rv-avatar" style="background:#6B5B4A">R</div><div><div class="rv-name">Robert K.</div><div class="rv-loc">Boca Raton, FL</div></div></div></div>
 <div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"The coaching sessions changed my life. Emma truly cares about people."</div><div class="rv-author"><div class="rv-avatar" style="background:#8B2D3A">S</div><div><div class="rv-name">Sandra V.</div><div class="rv-loc">Delray Beach, FL</div></div></div></div>
+<!-- Duplicates for seamless scroll -->
 <div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"Emma handled my entire loan closing in both English and Spanish. Flawless."</div><div class="rv-author"><div class="rv-avatar" style="background:#8B2D3A">M</div><div><div class="rv-name">Maria G.</div><div class="rv-loc">West Palm Beach, FL</div></div></div></div>
 <div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"12 documents translated for my immigration case. Fast, accurate, and so caring."</div><div class="rv-author"><div class="rv-avatar" style="background:#5B4A3F">C</div><div><div class="rv-name">Carlos R.</div><div class="rv-loc">Fort Lauderdale, FL</div></div></div></div>
 <div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"She explained every step in Spanish to my mother. So patient and professional."</div><div class="rv-author"><div class="rv-avatar" style="background:#7A6B5D">L</div><div><div class="rv-name">Luisa M.</div><div class="rv-loc">Greenacres, FL</div></div></div></div>
 <div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"Helped me prep for my citizenship interview. Passed on the first try!"</div><div class="rv-author"><div class="rv-avatar" style="background:#4A6741">J</div><div><div class="rv-name">Jorge P.</div><div class="rv-loc">Boynton Beach, FL</div></div></div></div>
 <div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"Last-minute notary for a real estate closing. Emma showed up in 30 minutes."</div><div class="rv-author"><div class="rv-avatar" style="background:#8B2D3A">D</div><div><div class="rv-name">Diana T.</div><div class="rv-loc">Lake Worth, FL</div></div></div></div>
-<div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"Translated my son's school records AND filed his enrollment. All in one visit."</div><div class="rv-author"><div class="rv-avatar" style="background:#5B6B7A">A</div><div><div class="rv-name">Ana S.</div><div class="rv-loc">Riviera Beach, FL</div></div></div></div>
 <div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"3 years of federal bid paperwork. She never misses a deadline. Ever."</div><div class="rv-author"><div class="rv-avatar" style="background:#6B5B4A">R</div><div><div class="rv-name">Robert K.</div><div class="rv-loc">Boca Raton, FL</div></div></div></div>
 <div class="rv"><div class="rv-stars">★★★★★</div><div class="rv-text">"The coaching sessions changed my life. Emma truly cares about people."</div><div class="rv-author"><div class="rv-avatar" style="background:#8B2D3A">S</div><div><div class="rv-name">Sandra V.</div><div class="rv-loc">Delray Beach, FL</div></div></div></div>
 </div></div>
